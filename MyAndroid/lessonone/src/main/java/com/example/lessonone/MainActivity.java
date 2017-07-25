@@ -31,20 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    String one = firstTextView.getText().toString();
-                    String two = secondTextView.getText().toString();
-                    firstTextView.setText(two);
-                    secondTextView.setText(one);
+                changeItems();
             }
         });
 
         firstTextListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String one = firstTextView.getText().toString();
-                String two = secondTextView.getText().toString();
-                firstTextView.setText(two);
-                secondTextView.setText(one);
+                changeItems();
             }
         };
 
@@ -52,13 +46,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    private void changeItems(){
+        String one = firstTextView.getText().toString();
+        String two = secondTextView.getText().toString();
+        firstTextView.setText(two);
+        secondTextView.setText(one);
+
+    }
+
     @Override
     public void onClick(View v) {
 
-                String one = firstTextView.getText().toString();
-                String two = secondTextView.getText().toString();
-                firstTextView.setText(two);
-                secondTextView.setText(one);
+               changeItems();
 
     }
 }

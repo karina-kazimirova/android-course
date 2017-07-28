@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ededed"
+    tools:context="com.example.lessontwo.DZ2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/flags_start_end_padding">
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/head"
+            android:text="Lesson2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/sub_head"
+            android:text="@string/aust_fl" />
+
+        <LinearLayout
+            style="@style/flags_last"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_middle_land"
+                android:background="@color/red"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_middle_land"
+                android:background="@color/white"
+                android:orientation="vertical" />
+
+            <View
+               android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_middle_land"
+                android:background="@color/red"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/sub_head"
+            android:text="@string/pol_fl" />
+
+        <LinearLayout
+            style="@style/flags_last"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_big_land"
+                android:background="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_big_land"
+                android:background="@color/red" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/sub_head"
+            android:text="@string/it_fl" />
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_weight="1"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:stretchColumns="*"
+            style="@style/flags_last">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            style="@style/sub_head"
+            android:text="@string/columb_fl" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_big_land"
+                android:background="@color/yellow" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_midd_land"
+                android:background="@color/dark_blue" />
+
+            <View
+                android:id="@+id/columbia_red"
+                style="@style/flags_last"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_midd_land"
+                android:background="@color/red" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/sub_head"
+            android:text="@string/madag_fl" />
+
+        <LinearLayout
+            style="@style/flags_last"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/flag_big_land"
+                    android:background="@color/red" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/flag_big_land"
+                    android:background="@color/green" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/sub_head"
+            android:text="@string/tail_fl" />
+
+        <LinearLayout
+            style="@style/flags_last"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_small_land"
+                android:background="@color/red" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_small_land"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_middle_land"
+                android:background="@color/dark_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_small_land"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_small_land"
+                android:background="@color/red" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/sub_head"
+            android:text="@string/denm_fl" />
+
+        <RelativeLayout
+            style="@style/flags_last"
+            android:layout_height="@dimen/flag_full_size_land"
+            android:background="@color/red"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="@dimen/flag_small_land"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginLeft="@dimen/flag_big_land"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flag_small_land"
+                android:background="@color/white"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

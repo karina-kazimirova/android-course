@@ -8,4 +8,42 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="main_button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:background">@android:color/holo_blue_light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="button2">
+        <item name="android:textColor">@color/llTopColor</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+    <style name="head">
+        <item name="android:textSize">@dimen/font_big</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="sub_head" parent="head">
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="flags">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="flags_last" parent="flags">
+        <item name="android:layout_marginBottom">40dp</item>
+    </style>
+
 </resources>

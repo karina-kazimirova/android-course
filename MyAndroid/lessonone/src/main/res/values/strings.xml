@@ -1,6 +1,21 @@
 <resources>
-    <string name="app_name">LessonOne</string>
+    <string name="app_name">Android Course</string>
     <string name="first_text">First Text</string>
     <string name="second_text">Second Text</string>
     <string name="button_text">Button Text</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="menu_name">Menu</string>
+    <string name="lesson_one">DZ1</string>
+    <string name="lesson_two">DZ2</string>
+
+    <!-- Flags -->
+    <string name="pol_fl">Poland</string>
+    <string name="aust_fl">Austria</string>
+    <string name="it_fl">Italy</string>
+    <string name="madag_fl">Madagascar</string>
+    <string name="columb_fl">Columbia</string>
+    <string name="tail_fl">Tailand</string>
+    <string name="denm_fl">Denmark</string>
+
 </resources>

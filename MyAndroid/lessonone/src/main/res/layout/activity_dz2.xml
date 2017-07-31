@@ -19,6 +19,7 @@
             android:text="Lesson2" />
 
         <TextView
+
             android:id="@+id/textView4"
             style="@style/sub_head"
             android:text="@string/aust_fl" />
@@ -73,7 +74,7 @@
             style="@style/sub_head"
             android:text="@string/it_fl" />
 
-        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <TableLayout
             android:layout_weight="1"
             android:layout_height="@dimen/flag_full_size"
             android:stretchColumns="*"

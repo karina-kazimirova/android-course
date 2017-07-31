@@ -18,4 +18,6 @@
     <string name="tail_fl">Tailand</string>
     <string name="denm_fl">Denmark</string>
 
+    <string name="img_err">Sorry, image not available now</string>
+
 </resources>

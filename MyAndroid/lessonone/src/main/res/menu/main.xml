@@ -12,7 +12,12 @@
 
     <item android:id="@+id/lesson_two"
         android:title="@string/lesson_two"
-        android:orderInCategory="100"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/lesson_three"
+        android:title="DZ3"
+        android:orderInCategory="300"
         app:showAsAction="never" />
 
 

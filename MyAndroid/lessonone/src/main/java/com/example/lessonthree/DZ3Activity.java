@@ -104,4 +104,10 @@ public class DZ3Activity extends AppCompatActivity {
             return "circular" + String.valueOf(mRadius);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
+    }
 }

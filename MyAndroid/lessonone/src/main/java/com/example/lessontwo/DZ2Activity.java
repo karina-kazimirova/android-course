@@ -51,5 +51,11 @@ public class DZ2Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
+    }
+
 
 }

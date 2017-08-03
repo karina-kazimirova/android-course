@@ -11,6 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.classwork4.Classwork4Activity;
+import com.example.classwork5.CLW5Activity;
+import com.example.lessonfour.DZ4Activity;
+import com.example.lessonfour.Dz4NewActivity;
 import com.example.lessonone.DZ1Activity;
 import com.example.R;
 import com.example.lessonthree.DZ3Activity;
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         Button dz1Button = (Button) findViewById(R.id.dz1Button);
         Button dz2Button = (Button) findViewById(R.id.dz2Button);
         Button dz3Button = (Button) findViewById(R.id.dz3Button);
+        Button dz4Button = (Button) findViewById(R.id.dz4Button);
+        Button  dz4newButton = (Button) findViewById(R.id.dz4newButton);
 
 
 
@@ -55,14 +61,25 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.dz3Button:
                         intent = new Intent(MainActivity.this, DZ3Activity.class);
                         break;
+
+                    case R.id.dz4Button:
+                        intent = new Intent(MainActivity.this, DZ4Activity.class);
+                        break;
+
+                    case R.id.dz4newButton:
+                        intent = new Intent(MainActivity.this, Dz4NewActivity.class);
+                        break;
                 }
                 startActivity(intent);
+                overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
             }
         };
 
         dz1Button.setOnClickListener(listener);
         dz2Button.setOnClickListener(listener);
         dz3Button.setOnClickListener(listener);
+        dz4Button.setOnClickListener(listener);
+        dz4newButton.setOnClickListener(listener);
 
     }
 
@@ -81,17 +98,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.lesson_one:
                 Intent intent = new Intent(MainActivity.this, DZ1Activity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
                 break;
-
 
             case R.id.lesson_two:
                 Intent intent1 = new Intent(MainActivity.this, DZ2Activity.class);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
                 break;
 
             case R.id.lesson_three:
                 Intent intent2 = new Intent(MainActivity.this, DZ3Activity.class);
                 startActivity(intent2);
+                overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
                 break;
         }
         return super.onOptionsItemSelected(item);

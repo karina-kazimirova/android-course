@@ -4,19 +4,19 @@
 
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!--Запрос о геолокации -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".main.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/DownUpActivity">
 
         <activity android:name="com.example.main.MainActivity">
             <intent-filter>
@@ -31,7 +31,27 @@
         <activity android:name="com.example.classwork3.Classwork3Activity" />
         <activity android:name="com.example.lessonthree.DZ3Activity" />
         <activity android:name="com.example.classwork4.Classwork4Activity" />
+        <activity android:name="com.example.lessonfour.DZ4Activity" />
+        <activity android:name="com.example.lessonfour.Dz4NewActivity" />
+        <activity android:name="com.example.classwork5.CLW5Activity" />
+        <activity android:name="com.example.test.TestClock" />
 
+
+        <!-- Декларируем и указываем какие сообщения получать ЧТОБЫ СООБЩЕНИЯ ЛОВИЛИСЬ ВСЕГДА ДАЖЕ КОГДА ПРИЛОЖЕНИЕ НЕ ЗАПУЩЕНО  -->
+       <!--<receiver android:name=".classwork5.MyBroadcastReceiver">
+            <intent-filter>
+
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.conn.CONNECTIVITY.CHANGED"/>
+            </intent-filter>
+
+        </receiver>-->
+
+
+        <!--  Декларируем Service можно в отдельном потоке -->
+        <service android:name=".classwork5.MyService"/>
+        <service android:name=".classwork5.MyIntentService" />
+        <service android:name=".classwork5.MyIntentService"/>
 
     </application>
 

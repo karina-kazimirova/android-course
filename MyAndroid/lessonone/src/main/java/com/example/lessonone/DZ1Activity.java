@@ -105,4 +105,10 @@ public class DZ1Activity extends AppCompatActivity implements View.OnClickListen
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
+    }
 }

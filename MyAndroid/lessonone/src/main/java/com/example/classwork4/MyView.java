@@ -11,6 +11,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.R;
@@ -26,6 +27,9 @@ public class MyView extends View {
 
     //Ограниченная область
     private RectF arcRectF = new RectF();
+
+    int cx;
+    int cy;
 
     public MyView(Context context) {
         super(context);
@@ -75,9 +79,6 @@ public class MyView extends View {
         myPaint.setStrokeWidth(strokeWidthInPx);
 
 
-
-
-
     }
 
 
@@ -85,12 +86,12 @@ public class MyView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int cx = getWidth()/2;
-        int cy = getHeight()/2;
-        int radius = Math.min(getWidth(), getHeight())/2;
+        //int cx = getWidth()/2;
+        //int cy = getHeight()/2;
+        int radius = Math.min(getWidth(), getHeight())/4;
         canvas.drawCircle(cx, cy, radius, myPaint);
 
-        int startx = 0;
+       /* int startx = 0;
         int starty =0;
         int stopx = getWidth();
         int stopy = getHeight();
@@ -105,5 +106,48 @@ public class MyView extends View {
         canvas.drawArc(arcRectF, 0,180, true, myPaint);
 
 
+        //Left, Top, Right, Bottom
+        canvas.drawRect(50, 50, 100, 100, myPaint);*/
+
+       // canvas.rotate(указать центр)
+
+
+    }
+
+
+    // При изенении размеров
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+    }
+
+
+    // Определяет начальные рамзеры View (при wrap_content в xml), в зависимости от загружаемого контента
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+
+    //При кликах на экран
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        // При перемещении пальца по экрану
+        if(event.getAction() == MotionEvent.ACTION_MOVE){
+            //Получаем координаты
+            cx = (int) event.getX();
+            cy = (int) event.getY();
+
+            // перерисовываем экран
+            invalidate();
+
+        }else if(event.getAction() == MotionEvent.ACTION_DOWN){
+
+        }else if(event.getAction() == MotionEvent.ACTION_UP){
+
+        }
+
+        return true;
     }
 }

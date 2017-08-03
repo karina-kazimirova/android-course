@@ -20,6 +20,16 @@
         style="@style/main_button"
         android:text="dz3" />
 
+    <Button
+        android:id="@+id/dz4Button"
+        style="@style/main_button"
+        android:text="dzClock" />
+
+    <Button
+        android:id="@+id/dz4newButton"
+        style="@style/main_button"
+        android:text="dzOwl" />
+
 
 
 </LinearLayout>

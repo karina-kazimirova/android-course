@@ -13,6 +13,9 @@ import android.widget.Button;
 
 import com.example.classwork4.Classwork4Activity;
 import com.example.classwork5.CLW5Activity;
+import com.example.classwork6.CLW6Activity;
+import com.example.classwork7.CLW7Activity;
+import com.example.lessonfive.DZ5Activity;
 import com.example.lessonfour.DZ4Activity;
 import com.example.lessonfour.Dz4NewActivity;
 import com.example.lessonone.DZ1Activity;
@@ -40,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
         Button dz2Button = (Button) findViewById(R.id.dz2Button);
         Button dz3Button = (Button) findViewById(R.id.dz3Button);
         Button dz4Button = (Button) findViewById(R.id.dz4Button);
-        Button  dz4newButton = (Button) findViewById(R.id.dz4newButton);
+        Button dz4newButton = (Button) findViewById(R.id.dz4newButton);
+        Button dz5Button = (Button) findViewById(R.id.dz5Button);
+        Button clw6Button = (Button) findViewById(R.id.clw6Button);
+        Button clw7Button = (Button) findViewById(R.id.clw7Button);
 
 
 
@@ -69,7 +75,19 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.dz4newButton:
                         intent = new Intent(MainActivity.this, Dz4NewActivity.class);
                         break;
+                    case R.id.dz5Button:
+                        intent = new Intent(MainActivity.this, DZ5Activity.class);
+                        break;
+                    case R.id.clw6Button:
+                        intent = new Intent(MainActivity.this, CLW6Activity.class);
+                        break;
+                    case R.id.clw7Button:
+                        intent = new Intent(MainActivity.this, CLW7Activity.class);
+                        break;
+
                 }
+
+
                 startActivity(intent);
                 overridePendingTransition(R.anim.diagonaltranslate, R.anim.alpha);
             }
@@ -80,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
         dz3Button.setOnClickListener(listener);
         dz4Button.setOnClickListener(listener);
         dz4newButton.setOnClickListener(listener);
+        dz5Button.setOnClickListener(listener);
+        clw6Button.setOnClickListener(listener);
+        clw7Button.setOnClickListener(listener);
 
     }
 

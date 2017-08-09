@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!--Запрос о геолокации -->
+    <!-- Запрос о геолокации -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -17,42 +16,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/DownUpActivity">
-
-        <activity android:name="com.example.main.MainActivity">
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lessonone.DZ1Activity" />
+        <activity android:name=".classwork2.Classwork2Activity" />
+        <activity android:name=".lessontwo.DZ2Activity" />
+        <activity android:name=".classwork3.Classwork3Activity" />
+        <activity android:name=".lessonthree.DZ3Activity" />
+        <activity android:name=".classwork4.Classwork4Activity" />
+        <activity android:name=".lessonfour.DZ4Activity" />
+        <activity android:name=".lessonfour.Dz4NewActivity" />
+        <activity android:name=".classwork5.CLW5Activity" />
+        <activity android:name=".lessonfive.DZ5Activity" />
+        <activity android:name=".classwork6.CLW6Activity" />
+        <activity android:name=".classwork7.CLW7Activity" />
 
-        <activity android:name="com.example.lessonone.DZ1Activity" />
-        <activity android:name="com.example.classwork2.Classwork2Activity" />
-        <activity android:name="com.example.lessontwo.DZ2Activity" />
-        <activity android:name="com.example.classwork3.Classwork3Activity" />
-        <activity android:name="com.example.lessonthree.DZ3Activity" />
-        <activity android:name="com.example.classwork4.Classwork4Activity" />
-        <activity android:name="com.example.lessonfour.DZ4Activity" />
-        <activity android:name="com.example.lessonfour.Dz4NewActivity" />
-        <activity android:name="com.example.classwork5.CLW5Activity" />
-        <activity android:name="com.example.test.TestClock" />
-
-
-        <!-- Декларируем и указываем какие сообщения получать ЧТОБЫ СООБЩЕНИЯ ЛОВИЛИСЬ ВСЕГДА ДАЖЕ КОГДА ПРИЛОЖЕНИЕ НЕ ЗАПУЩЕНО  -->
-       <!--<receiver android:name=".classwork5.MyBroadcastReceiver">
+        <!-- Декларируем и указываем какие сообщения получать ЧТОБЫ СООБЩЕНИЯ ЛОВИЛИСЬ ВСЕГДА ДАЖЕ КОГДА ПРИЛОЖЕНИЕ НЕ ЗАПУЩЕНО -->
+        <!--
+        <receiver android:name=".classwork5.MyBroadcastReceiver">
             <intent-filter>
 
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
                 <action android:name="android.net.conn.CONNECTIVITY.CHANGED"/>
             </intent-filter>
 
-        </receiver>-->
+        </receiver>
+        -->
 
 
-        <!--  Декларируем Service можно в отдельном потоке -->
-        <service android:name=".classwork5.MyService"/>
+        <!-- Декларируем Service можно в отдельном потоке -->
+        <service android:name=".classwork5.MyService" />
         <service android:name=".classwork5.MyIntentService" />
-        <service android:name=".classwork5.MyIntentService"/>
+        <service android:name=".classwork5.MyIntentService" />
 
+        <service
+            android:name=".lessonfive.MyService"
+            android:enabled="true"
+            android:exported="true">
+
+        </service>
     </application>
 
 </manifest>

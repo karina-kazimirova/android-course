@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="user"
+            type="com.example.sve.lessonseven.DZ7Activity.User"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="com.example.sve.lessonseven.DZ7Activity">
+
+        <ImageView
+            android:id="@+id/photoUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:padding="10dp"
+            app:src="@{user.photoUrl}"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="90dp"
+            app:layout_constraintHorizontal_bias="0.498" />
+
+        <TextView android:layout_width="wrap_content"
+            android:id="@+id/fio"
+            android:layout_height="wrap_content"
+            android:textColor="@{user.isMan ? @color/colorPrimary : @color/colorAccent}"
+            android:text="@{user.fio}"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/photoUrl"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView android:layout_width="wrap_content"
+            android:id="@+id/age"
+            android:layout_height="wrap_content"
+            android:textColor="@{user.isMan ? @color/colorPrimary : @color/colorAccent}"
+            android:text="@{user.age}"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/fio"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@{user.isMan ? @color/colorPrimary : @color/colorAccent}"
+            android:text="@{user.pol}"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/age"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

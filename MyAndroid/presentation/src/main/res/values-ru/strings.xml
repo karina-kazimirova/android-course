@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Курс Андроид</string>
+    <string name="first_text">Первый текст</string>
+    <string name="second_text">Второй текст</string>
+    <string name="button_text">Кнопка</string>
+    <string name="name">Имя</string>
+
+    <!-- Flags -->
+    <string name="pol_fl">Польша</string>
+    <string name="aust_fl">Австрия</string>
+    <string name="it_fl">Италия</string>
+    <string name="madag_fl">Мадагаскар</string>
+    <string name="columb_fl">Колумбия</string>
+    <string name="tail_fl">Тайланд</string>
+    <string name="denm_fl">Дания</string>
+
+</resources>

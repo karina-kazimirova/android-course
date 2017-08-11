@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sve.myandroid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.sve.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.sve.lessonthree.Lesson3Activity" />
+        <activity android:name="com.example.sve.lessonone.DZ1Activity" />
+        <activity android:name="com.example.sve.classwork2.Classwork2Activity" />
+        <activity android:name="com.example.sve.lessontwo.DZ2Activity" />
+        <activity android:name="com.example.sve.classwork3.Classwork3Activity" />
+        <activity android:name="com.example.sve.lessonthree.DZ3Activity" />
+        <activity android:name="com.example.sve.classwork4.Classwork4Activity" />
+        <activity android:name="com.example.sve.lessonfour.DZ4Activity" />
+        <activity android:name="com.example.sve.lessonfour.Dz4NewActivity" />
+        <activity android:name="com.example.sve.classwork5.CLW5Activity" />
+        <activity android:name="com.example.sve.lessonfive.DZ5Activity" />
+        <activity android:name="com.example.sve.classwork6.CLW6Activity" />
+      <!-- <activity android:name="com.example.sve.classwork7.CLW7Activity" />-->
+        <activity android:name="com.example.sve.lesson8.ClassWork8Activity"/>
+        <activity android:name="com.example.sve.lessonseven.DZ7Activity"/>
+
+
+        <service android:name="com.example.sve.classwork5.MyService" />
+        <service android:name="com.example.sve.classwork5.MyIntentService" />
+        <service android:name="com.example.sve.classwork5.MyIntentService" />
+
+        <service
+            android:name="com.example.sve.lessonfive.MyService"
+            android:enabled="true"
+            android:exported="true">
+
+        </service>
+
+
+
+    </application>
+
+</manifest>

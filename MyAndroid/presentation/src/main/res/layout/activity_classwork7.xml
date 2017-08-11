@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- говорим что используем data-binding-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <!-- Указываем актвити  -->
+        <variable
+            name="activity"
+            type="com.example.sve.classwork7.CLW7Activity"/>
+
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/superTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@{activity.myText}"
+        android:visibility="@{activity.myText == null ? View.GONE : View.VISIBLE}"/>
+
+
+
+</LinearLayout>
+</layout>

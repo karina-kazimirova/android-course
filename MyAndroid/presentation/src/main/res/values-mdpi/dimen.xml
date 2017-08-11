@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="classwork2_start_end_padding">20dp</dimen>
+    <dimen name="flags_start_end_padding">40dp</dimen>
+    <dimen name="flag_full_size">150dp</dimen>
+    <dimen name="flag_big">75dp</dimen>
+    <dimen name="flag_middle">50dp</dimen>
+    <dimen name="flag_midd">37.5dp</dimen>
+    <dimen name="flag_small">25dp</dimen>
+
+    <dimen name="font_big">60sp</dimen>
+    <dimen name="font_normal">30sp</dimen>
+
+</resources>

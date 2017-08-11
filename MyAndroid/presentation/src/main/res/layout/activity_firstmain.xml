@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ededed"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:padding="@dimen/classwork2_start_end_padding">
+
+        <Button
+            android:id="@+id/dz1Button"
+            style="@style/main_button"
+            android:text="dz1" />
+
+        <Button
+            android:id="@+id/dz2Button"
+            style="@style/main_button"
+            android:text="dz2" />
+
+        <Button
+            android:id="@+id/dz3Button"
+            style="@style/main_button"
+            android:text="dz3" />
+
+        <Button
+            android:id="@+id/dz4Button"
+            style="@style/main_button"
+            android:text="dz4-Clock" />
+
+        <Button
+            android:id="@+id/dz4newButton"
+            style="@style/main_button"
+            android:text="dz4-Owl" />
+
+        <Button
+            android:id="@+id/dz5Button"
+            style="@style/main_button"
+            android:text="dz5" />
+
+        <Button
+            android:id="@+id/clw6Button"
+            style="@style/main_button"
+            android:text="dz6" />
+
+        <Button
+            android:id="@+id/clw7Button"
+            style="@style/main_button"
+            android:text="clw7" />
+
+        <Button
+            android:id="@+id/clw8Button"
+            style="@style/main_button"
+            android:text="clw8" />
+
+        <Button
+            android:id="@+id/dz7Button"
+            style="@style/main_button"
+            android:text="dz7" />
+
+
+    </LinearLayout>
+</ScrollView>

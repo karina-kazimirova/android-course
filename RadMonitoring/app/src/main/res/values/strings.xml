@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RadMonitoring</string>
+
+    <!-- Main -->
+    <string name="velcomMain">Следите за радиационным фоном в стране и вашем городе</string>
+    <string name="mainButton">Выбрать город</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding Margin -->
+    <dimen name="paddingLeftRight">10dp</dimen>
+
+    <!--Text Sizes -->
+    <dimen name="smallText">10sp</dimen>
+    <dimen name="normalText">20sp</dimen>
+    <dimen name="bigText">30sp</dimen>
+    <dimen name="biggerText">40sp</dimen>
+
+
+
+
+</resources>

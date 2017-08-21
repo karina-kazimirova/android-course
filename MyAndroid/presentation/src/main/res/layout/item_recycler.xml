@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable name="person" type="com.example.sve.domain.entity.Person" />
+
+    </data>
+<LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="70dp"
@@ -8,40 +14,38 @@
     android:layout_marginBottom="10dp"
     android:layout_marginEnd="10dp">
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminate="false"
-        android:visibility="visible"
-        android:progress="1"
-        android:layout_margin="50dp"
-        tools:src="@mipmap/ic_launcher"/>
-
-
-
     <ImageView
         android:id="@+id/img_view"
         android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:src="@mipmap/ic_lm"/>
+        app:imageUrl="@{person.photo_Link}"
+        />
 
-    </FrameLayout>
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/text_view_name"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Ijijibgbbb"/>
+        android:text="@{person.name}"
+        tools:text="Ijijibgbbb"
+       />
+
+    <TextView
+        android:id="@+id/text_view_surname"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{person.surName}"
+        tools:text="Ijijibgbbb"
+        />
+
+
 
 
 
 </LinearLayout>
+    </layout>

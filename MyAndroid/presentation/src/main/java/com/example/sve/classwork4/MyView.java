@@ -79,7 +79,6 @@ public class MyView extends View {
 
         myPaint.setStrokeWidth(strokeWidthInPx);
 
-
     }
 
 
@@ -111,8 +110,6 @@ public class MyView extends View {
         canvas.drawRect(50, 50, 100, 100, myPaint);*/
 
        // canvas.rotate(указать центр)
-
-
     }
 
 

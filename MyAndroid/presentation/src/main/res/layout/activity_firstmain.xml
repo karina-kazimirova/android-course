@@ -64,6 +64,33 @@
             style="@style/main_button"
             android:text="dz7" />
 
+        <Button
+            android:id="@+id/clw9Button"
+            style="@style/main_button"
+            android:text="clw9" />
+
+        <Button
+            android:id="@+id/dz9Button"
+            style="@style/main_button"
+            android:text="dz9" />
+
+        <Button
+            android:id="@+id/dz10Button"
+            style="@style/main_button"
+            android:text="dz10" />
+
+        <Button
+            android:id="@+id/clw12Button"
+            style="@style/main_button"
+            android:text="clw12" />
+
+        <Button
+            android:id="@+id/clw13Button"
+            style="@style/main_button"
+            android:text="clw13" />
+
+
+
 
     </LinearLayout>
 </ScrollView>

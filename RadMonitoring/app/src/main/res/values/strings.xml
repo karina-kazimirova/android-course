@@ -3,6 +3,10 @@
 
     <!-- Main -->
     <string name="velcomMain">Следите за радиационным фоном в стране и вашем городе</string>
-    <string name="mainButton">Выбрать город</string>
+    <string name="selectCityButton">Выбрать свой город</string>
+    <string name="goToMapButton">На карте</string>
+
+    <!-- City -->
+    <string name="Minsk">Минск</string>
 
 </resources>

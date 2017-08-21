@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="java.lang.String"/>
+
+        <variable
+            name="viewModel"
+            type="com.example.sve.timer.TimerActivityViewModel" />
+    </data>
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="@{String.valueOf(viewModel.age)}"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_big" />
+
+
+</LinearLayout>
+    </layout>

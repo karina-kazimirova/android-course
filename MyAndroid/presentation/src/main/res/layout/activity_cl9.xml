@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.lang.String"/>
+        <import type="com.example.sve.classwork9.ClassWork9ViewModel.STATE"/>
+
+        <variable
+            name="viewModel"
+            type="com.example.sve.classwork9.ClassWork9ViewModel" />
+    </data>
+
+    <LinearLayout  xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="@{viewModel.name}"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="@{viewModel.surname}"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:text="@{String.valueOf(viewModel.age)}"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}"
+            />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.state == STATE.PROGRESS ? View.VISIBLE : View.GONE}"/>
+
+    </LinearLayout>
+
+</layout>

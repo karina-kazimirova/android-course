@@ -21,7 +21,7 @@
         android:gravity="center">
 
         <shape android:shape="oval" >
-            <solid android:color="@color/colorMain" />
+            <solid android:color="@color/colorPrimary" />
         </shape>
     </item>
 

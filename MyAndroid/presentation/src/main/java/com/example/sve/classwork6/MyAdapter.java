@@ -1,17 +1,25 @@
 package com.example.sve.classwork6;
 
 import android.content.Context;
+import android.databinding.BindingAdapter;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
+import android.widget.Toast;
 
-
+import com.example.sve.data.entity.Profile;
+import com.example.sve.domain.entity.Person;
 import com.example.sve.myandroid.R;
+import com.example.sve.myandroid.databinding.ItemRecyclerBinding;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -23,75 +31,30 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Holder> {
 
-
     private List<Person> persons;
-    private OnItemClickListener onItemClickListener;
 
-    public void setListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-
-
-    //создаем конструктор
     public MyAdapter(List<Person> persons){
         this.persons= persons;
     }
-
 
     @Override
     public MyAdapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         //из xml получаем объектную модель
-      View root = LayoutInflater.from(parent.getContext())
-              .inflate(R.layout.item_recycler, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        ItemRecyclerBinding binding = ItemRecyclerBinding.inflate(inflater, parent, false);
         Log.e("AAA", "onCreateViewHolder()");
-        return new Holder(root);
+        return new Holder(binding.getRoot());
     }
 
     // заполняем
     @Override
     public void onBindViewHolder(MyAdapter.Holder holder, int position) {
         Log.e("AAA", "onBingViewHolder()");
-        final Person item = persons.get(position);
-        holder.textView.setText(persons.get(position).name);
-        holder.imageView.setVisibility(View.VISIBLE);
-        holder.progressBar.setVisibility(View.VISIBLE);
+        final Person person = persons.get(position);
+        holder.binding.setPerson(person);
 
 
-
-
-        Context context = holder.imageView.getContext();
-
-        final ProgressBar progressView = holder.progressBar;
-        Picasso.with(context).load(persons.get(position).photo_Link)
-                .resize(350,250)
-                .into(holder.imageView, new Callback() {
-
-                    @Override
-                    public void onSuccess() {
-                        progressView.setVisibility(View.GONE);
-
-                    }
-
-                    @Override
-                    public void onError() {
-
-
-                    }
-                });
-
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if(onItemClickListener != null){
-                    onItemClickListener.onItemClick(String.valueOf(persons));
-                }
-
-            }
-        });
 
     }
 
@@ -102,26 +65,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Holder> {
         return persons == null ? 0 : persons.size();
     }
 
-    public static class Holder extends RecyclerView.ViewHolder{
+    public class Holder extends RecyclerView.ViewHolder{
 
-        ImageView imageView;
-        TextView textView;
-        ProgressBar progressBar;
+        ItemRecyclerBinding binding;
 
-        public Holder(View itemView) {
-            super(itemView);
-
-            imageView = (ImageView) itemView.findViewById(R.id.img_view);
-            textView = (TextView) itemView.findViewById(R.id.text_view);
-            progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar);
+        public Holder(View v) {
+            super(v);
+            binding = DataBindingUtil.bind(v);
         }
 
     }
 
 
-    interface OnItemClickListener{
-        public void onItemClick(String item);
+   @BindingAdapter("bind:imageUrl")
+    public static void loadImage(ImageView imageView, String v) {
+       Picasso.with(imageView.getContext()).load(v)
+               .resize(350,250)
+               .into(imageView);
     }
+
+
 
 
 }

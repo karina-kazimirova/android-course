@@ -15,7 +15,6 @@
         <activity android:name="com.example.sve.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,9 +31,13 @@
         <activity android:name="com.example.sve.classwork5.CLW5Activity" />
         <activity android:name="com.example.sve.lessonfive.DZ5Activity" />
         <activity android:name="com.example.sve.classwork6.CLW6Activity" />
-      <!-- <activity android:name="com.example.sve.classwork7.CLW7Activity" />-->
+        <!--<activity android:name="com.example.sve.classwork7.CLW7Activity" />-->
         <activity android:name="com.example.sve.lesson8.ClassWork8Activity"/>
         <activity android:name="com.example.sve.lessonseven.DZ7Activity"/>
+        <activity android:name="com.example.sve.classwork9.ClassWork9Activity"/>
+        <activity android:name="com.example.sve.timer.TimerActivity"/>
+        <activity android:name="com.example.sve.classwork12.CLW12Activity"/>
+        <activity android:name="com.example.sve.classwork13.CLW13Activity"/>
 
 
         <service android:name="com.example.sve.classwork5.MyService" />

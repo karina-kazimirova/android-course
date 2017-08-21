@@ -6,10 +6,12 @@ package com.example.sve.base;
 
 public interface BaseViewModel {
 
-    // определяем общие для всех активити
-
     public void init();
+
     public void release();
+
     public void resume();
+
     public void pause();
+
 }

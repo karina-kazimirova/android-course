@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#ededed"
-    tools:context="com.example.lessontwo.DZ2Activity">
+    tools:context="com.example.sve.lessontwo.DZ2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"

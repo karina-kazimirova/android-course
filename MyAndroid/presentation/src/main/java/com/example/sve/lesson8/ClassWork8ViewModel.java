@@ -54,8 +54,8 @@ public class ClassWork8ViewModel implements BaseViewModel{
 
         // переходим на активити
 
-       // Intent intent = new Intent(this, Lesson3Activity.class);
-       // activity.startActivity(intent);
+       //Intent intent = new Intent(this, Lesson3Activity.class);
+        //activity.startActivity(intent);
     }
 
 
